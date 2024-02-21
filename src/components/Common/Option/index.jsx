@@ -2,7 +2,7 @@ import Check from "../../../assets/check.svg";
 import CheckFill from "../../../assets/check-fill.svg";
 import "./style.css";
 const Option = ({ option, isSelected, onSelect }) => {
-  console.log({ isSelected });
+
   return (
     <div
       className={`custom-option ${isSelected ? "selected" : ""}`}

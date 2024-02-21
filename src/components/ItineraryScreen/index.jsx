@@ -3,7 +3,7 @@ import BrandHeader from "../Common/BrandHeader/index.jsx";
 import Card from "../Common/Card/index.jsx";
 import Button from "../Common/Button/index.jsx";
 import { Link, useLocation } from "react-router-dom";
-import useFetchAPI from "../../hooks/useFetchAPI";
+import useFetchAPI from "../../hooks/useFetchAPI.js";
 
 const ItineraryScreen = () => {
   // data = {
@@ -29,8 +29,7 @@ const ItineraryScreen = () => {
       },
     }
   );
-  console.log(data);
-  const itineraries = JSON.parse(data?.response).itinerary;
+  const itineraries = data ? JSON.parse(data?.response).itinerary : [];
   if (loading) return <div>Loading...</div>;
   return (
     <div className="itinerary-screen">

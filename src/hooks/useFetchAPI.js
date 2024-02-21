@@ -11,6 +11,7 @@ const useFetchAPI = (url, options = {}) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
+    console.log({ url });
     const fetchData = async () => {
       setLoading(true);
       console.log("useFetchAPI");
@@ -31,7 +32,7 @@ const useFetchAPI = (url, options = {}) => {
     if (url) {
       fetchData();
     }
-  }, []); // Depend on URL and options to refetch when they change
+  }, [url]); // Depend on URL and options to refetch when they change
 
   return { loading, data, error };
 };

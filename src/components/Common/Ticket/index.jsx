@@ -5,7 +5,6 @@ import TicketBodyMedium from "../../../assets/ticket-body-medium.svg";
 import "./style.css";
 import Button from "../Button";
 import Option from "../Option";
-import { useNavigate } from "react-router-dom";
 const Ticket = ({
   headerText,
   inputPlaceholder,
