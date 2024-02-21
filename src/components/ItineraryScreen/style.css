@@ -1,0 +1,41 @@
+.itinerary-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  height: 720px;
+  background: #0b0c0e;
+  overflow: hidden;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.cards-wrapper {
+  /* position: absolute; */
+  /* top: 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 76px;
+  padding-bottom: 16px;
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 360px) {
+  .itinerary-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    height: max-content;
+    background: #0b0c0e;
+  }
+}
+.itinerary-screen::-webkit-scrollbar {
+  display: none;
+}
+.back-button {
+  width: 100%;
+  cursor: pointer;
+}
