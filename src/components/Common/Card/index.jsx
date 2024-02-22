@@ -21,11 +21,13 @@ const Card = ({ itinerary }) => {
         background: `url(${randomImage}) center/cover no-repeat`,
       }}
     >
-      <div className="day-number">{itinerary.day}</div>
-      <div className="activity-cards-wrapper">
-        {itinerary?.activities?.map((activity, index) => (
-          <ActivityCard key={index} activity={activity} />
-        ))}
+      <div className="gradient-wrapper">
+        <div className="day-number">{itinerary.day}</div>
+        <div className="activity-cards-wrapper">
+          {itinerary?.activities?.map((activity, index) => (
+            <ActivityCard key={index} activity={activity} activityNumber={index+1} />
+          ))}
+        </div>
       </div>
     </div>
   );

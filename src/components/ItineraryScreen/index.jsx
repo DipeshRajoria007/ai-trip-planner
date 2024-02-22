@@ -5,6 +5,7 @@ import Button from "../Common/Button/index.jsx";
 import { Link, useLocation } from "react-router-dom";
 import useFetchAPI from "../../hooks/useFetchAPI.js";
 import Loading from "../Common/Loading/index.jsx";
+import ErrorScreen from "../ErrorScreen/index.jsx";
 
 const ItineraryScreen = () => {
   // data = {
@@ -33,14 +34,17 @@ const ItineraryScreen = () => {
   );
   const itineraries = data ? JSON.parse(data?.response).itinerary : [];
   if (loading) return <Loading />;
+  if (error )
+    return (
+      <div>
+        <ErrorScreen errorMessage={"dummy"} />
+      </div>
+    );
   return (
     <div className="itinerary-screen">
       <BrandHeader />
       <div className="cards-wrapper">
-        {itineraries.map((itinerary, index) => {
-          return <Card itinerary={itinerary} key={index} />;
-        })}
-        {itineraries.map((itinerary, index) => {
+        {itineraries?.map((itinerary, index) => {
           return <Card itinerary={itinerary} key={index} />;
         })}
       </div>

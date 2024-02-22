@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   position: absolute;
   top: 16px;
   gap: 8px;
@@ -18,7 +19,7 @@
   letter-spacing: -1.008px;
 }
 .brand-name::before {
-  content: " ";
+  /* content: " "; */
   position: absolute;
   top: 50%;
   background: url("../../../assets/AI-Trip-Planner.png");

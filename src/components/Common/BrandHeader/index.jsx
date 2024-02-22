@@ -1,4 +1,3 @@
-import React from "react";
 import BrandLogo from "../../../assets/brand-logo.svg";
 import "./style.css";
 const BrandHeader = () => {

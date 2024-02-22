@@ -12,12 +12,10 @@
     0px -119px 48px 0px rgba(0, 0, 0, 0.05),
     0px -186px 52px 0px rgba(0, 0, 0, 0.01);
   overflow-x: scroll;
-  padding-right: 0;
-  height: fit-content;
 }
-.card::before {
+.gradient-wrapper {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   top: 0;
@@ -27,10 +25,15 @@
     #0b0c0e -11.2%,
     rgba(11, 12, 14, 0) 69.89%
   );
+  z-index: 0;
+  overflow-x: scroll;
+  padding-right: 0;
+  height: fit-content;
 }
 .day-number {
   margin: 24px 0 0 12px;
   color: #fff;
+  margin-bottom: 24px;
   font-family: "Geist";
   font-size: 40px;
   font-style: normal;
