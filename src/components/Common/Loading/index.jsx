@@ -27,7 +27,6 @@ const Loading = () => {
             borderRadius: "130px",
             border: "12px solid white",
             outline: "16px solid #2B3C44",
-            // backgroundColor: "blue",
           }}
         ></div>
       </div>

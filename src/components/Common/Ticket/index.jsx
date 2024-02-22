@@ -75,7 +75,6 @@ const Ticket = ({
             <Button
               text={CTAButton}
               onButtonClick={onButtonClick}
-              variant="primary"
             />
           </div>
         </div>

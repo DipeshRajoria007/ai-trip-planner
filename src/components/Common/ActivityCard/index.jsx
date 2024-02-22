@@ -11,7 +11,7 @@ const ActivityCard = ({ activity, activityNumber }) => {
         <div className="text">{activity?.location}</div>
         <div className="detail-text">
           <span>₹{activity?.price}</span> <img src={Dot} alt="dot" />{" "}
-          <span> 1 hour</span>
+          <span> {activity?.duration}</span>
         </div>
       </div>
       <div className="detail-text">{activity?.description}</div>

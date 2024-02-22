@@ -1,4 +1,4 @@
-import React from "react";
+import { useMemo } from "react";
 import ActivityCard from "../ActivityCard";
 import "./style.css";
 import Image_1 from "../../../assets/Image-1.png";
@@ -11,8 +11,7 @@ const randomImagePicker = () => {
   return Images[Math.floor(Math.random() * Images.length)];
 };
 const Card = ({ itinerary }) => {
-  const randomImage = randomImagePicker();
-  console.log(itinerary);
+  const randomImage = useMemo(randomImagePicker, []);
 
   return (
     <div
@@ -25,7 +24,11 @@ const Card = ({ itinerary }) => {
         <div className="day-number">{itinerary.day}</div>
         <div className="activity-cards-wrapper">
           {itinerary?.activities?.map((activity, index) => (
-            <ActivityCard key={index} activity={activity} activityNumber={index+1} />
+            <ActivityCard
+              key={index}
+              activity={activity}
+              activityNumber={index + 1}
+            />
           ))}
         </div>
       </div>
