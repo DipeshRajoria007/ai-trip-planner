@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 360px;
-  height: 720px;
+  width: 480px;
+  height: 860px;
   position: relative;
   background-color: #192226;
-  
 }
 
-/* Small devices (phones, 360px and down) */
-@media only screen and (max-width: 360px) {
+/* Small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
   .mainScreen {
     display: flex;
     flex-direction: column;

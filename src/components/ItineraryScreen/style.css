@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 360px;
-  height: 720px;
+  width: 480px;
+  height: 860px;
   background: #0b0c0e;
   overflow: hidden;
   position: relative;
@@ -21,12 +21,12 @@
 }
 
 /* Small devices (phones, 600px and down) */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 480px) {
   .itinerary-screen {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     height: max-content;
     background: #0b0c0e;
