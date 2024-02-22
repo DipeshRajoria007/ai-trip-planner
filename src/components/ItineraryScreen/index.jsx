@@ -24,6 +24,7 @@ const ItineraryScreen = () => {
         when_your_trip_start: inputValues[3],
         itinerary_type: inputValues[4],
         budget: inputValues[5],
+        travel_preference: "",
       }),
       headers: {
         "Content-Type": "application/json",
