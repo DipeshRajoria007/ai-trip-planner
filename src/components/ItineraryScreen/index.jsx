@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import useFetchAPI from "../../hooks/useFetchAPI.js";
 import Loading from "../Common/Loading/index.jsx";
 import ErrorScreen from "../ErrorScreen/index.jsx";
+import { createTripPrompt } from "../../utils/prompt.js";
 
 const ItineraryScreen = () => {
   // data = {
@@ -15,26 +16,30 @@ const ItineraryScreen = () => {
   // };
   const location = useLocation();
   const { inputValues } = location.state || {};
+  const prompt = createTripPrompt({
+    where_to: inputValues[1],
+    number_of_days: inputValues[2],
+    when_your_trip_start: inputValues[3],
+    itinerary_type: inputValues[4],
+    budget: inputValues[5],
+    travel_preference: "",
+  });
   const { data, loading, error } = useFetchAPI(
-    "https://trip-planner-ai-api.onrender.com/trip_planner_api",
+    "https://trip-planner-ai-api.onrender.com/wanderlust",
     {
       method: "POST",
       body: JSON.stringify({
-        where_to: inputValues[1],
-        number_of_days: inputValues[2],
-        when_your_trip_start: inputValues[3],
-        itinerary_type: inputValues[4],
-        budget: inputValues[5],
-        travel_preference: "",
+        prompt,
       }),
       headers: {
         "Content-Type": "application/json",
       },
     }
   );
+  console.log({ data, loading, error });
   const itineraries = data ? JSON.parse(data?.response).itinerary : [];
   if (loading) return <Loading />;
-  if (error )
+  if (error && !loading)
     return (
       <div>
         <ErrorScreen errorMessage={"dummy"} />
