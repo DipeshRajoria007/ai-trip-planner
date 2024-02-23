@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 export const TicketDetails = [
   {
     ticketNumber: 1,
@@ -10,7 +11,7 @@ export const TicketDetails = [
     ticketNumber: 2,
     headerText: "For the duration of",
     inputPlaceholder: "ex. 6",
-    inputType: "text",
+    inputType: "number",
     CTAButton: "Next",
   },
   {
@@ -92,7 +93,7 @@ export const TicketDetails = [
       },
       {
         id: 2,
-        value: "Midium",
+        value: "Medium",
       },
       {
         id: 3,

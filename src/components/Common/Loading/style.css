@@ -18,8 +18,7 @@
 .cutout-loading {
   background: url("../../../assets/long-bg.png");
   background-size: cover;
-  /* background-size: cover; */
-  animation: scrollBackground 10s linear infinite;
+  animation: scrollBackground 50s linear infinite;
   background-repeat: repeat-x;
 }
 .text-loading {

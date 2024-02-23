@@ -112,7 +112,6 @@ input:-ms-input-placeholder {
 /* For Microsoft Edge */
 input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
-
   text-align: center;
   font-family: "Geist";
   font-size: 28px;
@@ -120,4 +119,31 @@ input::-ms-input-placeholder {
   font-weight: 500;
   line-height: 120%; /* 33.6px */
   letter-spacing: -1.4px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

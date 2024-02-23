@@ -5,6 +5,7 @@ import TicketBodyMedium from "../../../assets/ticket-body-medium.svg";
 import "./style.css";
 import Button from "../Button";
 import Option from "../Option";
+import { useRef } from "react";
 const Ticket = ({
   headerText,
   inputPlaceholder,
@@ -44,13 +45,24 @@ const Ticket = ({
           <img className="ticket-body-bg" src={TicketBodyMedium} alt="ticket" />
         )}
         <div className="ticket-body-content">
-          {inputType === "text" || inputType === "date" ? (
+          {inputType === "text" ||
+          inputType === "date" ||
+          inputType === "number" ? (
             <div className="input-container">
               <input
+                style={{
+                  position: "relative",
+                  color: inputValue ? "#fff" : "rgba(255, 255, 255, 0.4)",
+                }}
                 type={inputType}
                 placeholder={inputPlaceholder}
                 value={inputValue}
                 onChange={onChange}
+                min={
+                  inputType === "date"
+                    ? new Date().toISOString().split("T")[0]
+                    : null
+                }
               />
             </div>
           ) : inputType === "options" ? (
@@ -75,6 +87,7 @@ const Ticket = ({
             <Button
               text={CTAButton}
               onButtonClick={onButtonClick}
+              disabled={inputValue?.trim().length === 0}
             />
           </div>
         </div>

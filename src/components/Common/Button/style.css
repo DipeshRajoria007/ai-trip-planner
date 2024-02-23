@@ -17,3 +17,9 @@
   line-height: 160%; /* 22.4px */
   letter-spacing: 0.4px;
 }
+
+.disabled {
+  background-color: #f2f2f2;
+  color: #b3b3b3;
+  cursor: not-allowed;
+}
