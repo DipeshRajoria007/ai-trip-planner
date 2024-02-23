@@ -33,7 +33,9 @@ const IntroScreen = () => {
       <div className="gradient"></div>
 
       {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
-      <div style={{ scale: "1.2", marginTop: "80px" }}>
+      <div
+        style={{ scale: "1.2", marginTop: "80px", display: "flex", flex: 1 }}
+      >
         <svg
           width="344"
           height="512"

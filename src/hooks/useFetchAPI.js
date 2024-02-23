@@ -11,7 +11,6 @@ const useFetchAPI = (url, options = {}) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
-    console.log({ url });
     const fetchData = async () => {
       setLoading(true);
       console.log("useFetchAPI");

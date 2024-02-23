@@ -5,7 +5,16 @@ const ErrorScreen = ({ errorMessage }) => {
   return (
     <div className="mainScreen">
       <div className="gradient">
-        <BrandHeader />
+        <div
+          style={{
+            position: "absolute",
+            top: "10",
+            width: "100%",
+            zIndex: "1",
+          }}
+        >
+          <BrandHeader />
+        </div>
         <div className="error-content">
           <img
             src={error}
@@ -16,7 +25,14 @@ const ErrorScreen = ({ errorMessage }) => {
           />
           <div className="error-text">
             <div>Something went wrong</div>
-            <div>{errorMessage || "Data format not as specified"}</div>
+            <div
+              style={{
+                padding: "24px",
+                textAlign: "center",
+              }}
+            >
+              {errorMessage || "Data format not as specified"}
+            </div>
           </div>
         </div>
       </div>
