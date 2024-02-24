@@ -15,13 +15,13 @@ const ItineraryScreen = () => {
   const [error, setError] = useState(null);
   const location = useLocation();
   const { inputValues } = location.state || {};
+  console.log({ inputValues });
   const prompt = createTripPrompt({
     where_to: inputValues[1],
     number_of_days: inputValues[2],
-    when_your_trip_start: inputValues[3],
+    trip_start: inputValues[3],
     itinerary_type: inputValues[4],
     budget: inputValues[5],
-    travel_preference: "",
   });
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const ItineraryScreen = () => {
         setError(error.message);
       })
       .finally(() => {
-        setLoading(false); 
+        setLoading(false);
       });
   }, []);
 
