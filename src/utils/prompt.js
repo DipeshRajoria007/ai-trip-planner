@@ -235,7 +235,8 @@ Then check where the user is going, for how many days and which type of trip the
 2.) Take time to think and plan the trip on your own first.
 3.) You should provide where the user will go on which day, on a single day time based trip planning, at what time user will visit at
 what site seeing area, also add a small comment about that area, where the user will have breakfast, shopping, dinner etc.
-4.) Final Output is the json in the mentioned format:FORMAT. No extra text needed.`;
+4.) Final Output is the json in the mentioned format:FORMAT. No extra text needed.
+5.) Show all prices in INR.`;
 
 export const createTripPrompt = ({
   where_to,
